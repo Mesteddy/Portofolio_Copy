@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+/* Bandaid solution to empty white bar. It works on desktop but broke mobile */
+html {
+	/* width: 100%; */
+	overflow-x: hidden;
+	/* transform: scale(1); */
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	padding-right: 0px !important;
+}
+
+#navbarAbout p {
+	text-align: justify;
+	color: lightgray;
+}
+
+#navbarContact li {
+	color: lightgray;
+}
+
+#navbarContact a {
+	color: lightgray;
+}
+
+.portrait {
+	object-fit: scale-down;
+	max-height: 200px;
+}
+
+.btn {
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+	transition: all 0.3s ease 0s;
+}
+
+.btn:hover {
+	/* transform: scale(0.98); */
+	transform: translateY(-2.5px);
+	box-shadow: 0px 4px 12px rgba(106, 160, 118, 0.45);
+}
+
+.modal-footer .btn:hover {
+	background-color: white;
+	color: gray;
+}
+
+/* Showcase (Over Video) */
+
+#about h2 {
+	margin: 10px 0;
+	font-weight: 300;
+	/* font-size: 60px; */
+	line-height: 1.2;
+}
+
+#about h3 {
+	font-weight: 400;
+	margin: 15px 0;
+}
+
+#about h4 {
+	margin: 10px 0;
+	font-weight: inherit;
+	text-align: left;
+}
+
+.text-responsive-h2 {
+	font-size: calc(200% + 0.5vw + 0.5vh);
+}
+
+.text-responsive-h3 {
+	font-size: calc(100% + 0.5vw + 0.5vh);
+}
+
+.text-responsive-h4 {
+	font-size: calc(70% + 0.5vw + 0.5vh);
+}
+
+
+@media (max-width: 1200px) {  
+	.about-btn-group .btn {
+		font-size: calc(45% + 0.5vw + 0.5vh);
+	}
+	/* #about {
+		max-width: 1200px;
+	} */
+  }
+
+/* VIDEO SHOWCASE */
+.showcase {
+	position: relative;
+	/* height: 60vh; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 0 20px;
+}
+
+
+.video-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.content {
+	z-index: 10;
+}
+
+.video-container video {
+	min-width: 100%;
+	min-height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.video-container:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.45);
+}
+
+/* END VIDEO SHOWCASE */
+
+/* CAPSTONE SECTION */
+
+.capstone {
+	display: flex;
+	flex-direction: row;
+	/* height: 50vh; */
+	align-items: center;
+	/* justify-content: center; */
+	background-image: url(../assets/images/topography-overlay.png);
+	/* object-fit: contain; */
+}
+
+.capstone h1 {
+	padding-bottom: 10px;
+}
+
+.capstone img {
+	align-self: flex-start;
+	width: 100%;
+}
+
+/* .card-container {
+	max-width: 70%;
+	justify-content: center;
+	display: inline-block;
+} */
+
+.btn-container {
+	padding: 0.2rem;
+}
+
+.btn-group-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#capstone-modal {
+	list-style-position: inside;
+}
+
+/* END CAPSTONE SECTION */
+
+/* WORK SECTION */
+
+.work {
+	color: var(--bs-light);
+	/* background-image: url(../assets/images/topography-overlay.png); */
+
+}
+
+.work-section {
+	padding-top: 20px;
+	display: flex;
+	flex-direction: row;
+}
+
+.work .media {
+	margin-top: 30px;
+}
+
+.work .media :hover {
+	background: #ffffff;
+	transition: all 0.3s ease-in;
+}
+
+.work .media-object {
+	border: 2px solid #ffffff;
+	border-radius: 50%;
+	color: #127f2c;
+	font-size: 24px;
+	margin-right: 24px;
+	width: 45px;
+	height: 45px;
+	line-height: 40px;
+	text-align: center;
+	vertical-align: middle;
+	/* transition: all 0.4s ease-in; */
+}
+
+/* END WORK SECTION */
+
+/* TECHNOLOGIES SECTION */
+
+.tech {
+	/* background-color: rgb(23, 41, 35); */
+	background-color: black;
+}
+
+.tech-image {
+	/* font-size: 1.125rem; */
+	/* text-anchor: middle; */
+	object-fit: scale-down;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	background-image:
+		/* linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), */
+		url(../assets/images/topography-overlay.png);
+}
+
+.dark-card {
+	/* background-color: #181a1b; */
+	background-color: var(--bs-gray-dark);
+	border-color: #272827;
+	color: var(--bs-light);
+}
+
+.card {
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+}
+
+
+/* END TECHNOLOGIES SECTION */
+
+/* Modal popup */
+
+.modal-body {
+	text-align: justify;
+}
+
+.modal-content {
+	background-color: var(--bs-gray-dark);
+	color: var(--bs-light);
+}
+
+.modal-header {
+	background-color: #212529;
+	border-bottom: 1px solid var(--bs-success);
+}
+
+.modal-footer {
+	background-color: #212529;
+	border-top: 1px solid var(--bs-success);
+}
+
+/* Software Portfolio Section */
+.software-card {
+	background-color: var(--bs-gray-dark);
+	color: var(--bs-light);
+	/* text-align: justify; */
+}
+
+.software-card p {
+	text-align: justify;
+	min-height: 100px;
+	max-width: 80%;
+}
+
+.sw-img-container {
+	float: right;
+	padding: 20px;
+	/* width: 200px;
+	height: 200px;
+	object-fit: fill; */
+}
+
+.sw-img {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.button-row {
+	position: relative;
+	/* bottom: 15px; */
+}
+
+/* .button-footer {
+	padding-bottom: 15px;
+	padding-left: 15px;
+} */
+
+/* End Software Portfolio */
+
+
+/* Mechanical Portfolio Section */
+
+
+.mech-img {
+	object-fit: scale-down;
+	/* max-height: 300px; */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+/* End Mech Portfolio Section */
+
+footer {
+	background-color: var(--bs-gray-dark);
+}
+
+footer p {
+	color: var(--bs-light);
+}
+
+/* Breakpoint for mobile responsiveness */
+@media screen and (max-width: 800px) {
+	.showcase {
+		height: 100vh !important;
+	}
+
+	/* .content {
+		zoom: 0.8;
+		transform: scale(0.8);
+		-moz-transform: scale(0.8);
+		width: 100vw !important;
+	} */
+
+	/* .content h2 {
+		zoom: 0.6 !important;
+		transform: scale(0.6) !important;
+		-moz-transform: scale(0.6) !important;
+	} */
+
+	/* .content h3 {
+		zoom: 0.9 !important;
+		transform: scale(0.9) !important;
+		-moz-transform: scale(0.9) !important;
+	} */
+
+	/* .content h4 {
+		min-width: inherit;
+		text-align: justify;
+		zoom: 1.05 !important;
+		transform: scale(1.05) !important;
+		-moz-transform: scale(1.05) !important;
+	} */
+
+	.capstone {
+		height: 75vh !important;
+	}
+
+	.sw-img {
+		display: none;
+	}
+
+	.software-card p {
+		max-width: 100%;
+	}
+
+	.portrait {
+		object-fit: scale-down;
+		max-height: 300px;
+	}
+
+	.btn-group-container {
+		/* transform: scale(0.8); */
+		zoom: 0.8;
+		transform: scale(0.8);
+		-moz-transform: scale(0.8);
+		transform-origin: left center;
+		-moz-transform-origin: left center;
+		display: flex;
+		justify-content: left;
+		align-items: flex-start;
+		padding: 0px;
+	}
+}
+
+/* Safari hack for image scaling issue */
+@media not all and (min-resolution:.001dpcm) {
+	.mech-img {
+		max-height: 300px;
+		object-fit: cover;
+	}
+
+	.content {
+		zoom: 1 !important;
+		transform: scale(1.0) !important;
+		-moz-transform: scale(1.0) !important;
+		min-width: 50vw !important;
+		max-width: 90vw !important;
+	}
+}
+
+@media (-webkit-min-device-pixel-ratio: 2.5) {
+	/* .content {
+		zoom: 0.75 !important;
+		transform: scale(0.75) !important;
+		-moz-transform: scale(0.75) !important;
+		min-width: 50vw;
+		max-width: 90vw;
+	} */
+}
+
+/* For device pixel ratios > 1.3, adjust showcase content and capstone 
+container scaling to fix spillover into surrounding divs */
+@media (-webkit-min-device-pixel-ratio: 1.3) {
+	/* .content {
+		zoom: 0.8;
+		transform: scale(0.8);
+		-moz-transform: scale(0.8);
+		min-width: 70vw;
+	}
+
+	.content h2 {
+		font-weight: 100;
+		font-size: 40px;
+		zoom: 0.5;
+		transform: scale(0.5);
+		-moz-transform: scale(0.5);
+	} */
+
+	/* .content h3 {
+		zoom: 0.9;
+		transform: scale(0.9);
+		-moz-transform: scale(0.9);
+	} */
+
+	/* .content h4 {
+		min-width: inherit;
+		text-align: justify;
+		zoom: 0.8;
+		transform: scale(0.8);
+		-moz-transform: scale(0.8);
+	} */
+
+	.capstone .container {
+		width: 65%;
+		transform: translate(22%, 0%);
+	}
+
+
+}
+
+/* For device pixel ratios > 2.5, adjust showcase content and capstone 
+container scaling to fix spillover into surrounding divs */
+@media (-webkit-min-device-pixel-ratio: 2.5) {
+	/* .content {
+		zoom: 0.75;
+		transform: scale(0.75);
+		-moz-transform: scale(0.75);
+		min-width: 50vw;
+		max-width: 90vw;
+	}
+
+	.content h2 {
+		font-weight: 100;
+		font-size: 40px;
+		zoom: 0.4;
+		transform: scale(0.4);
+		-moz-transform: scale(0.4);
+	}
+
+	.content h3 {
+		zoom: 1;
+		transform: scale(1);
+		-moz-transform: scale(1);
+	}
+
+	.content h4 {
+		min-width: inherit;
+		text-align: justify;
+		zoom: 0.7;
+		transform: scale(0.7);
+		-moz-transform: scale(0.7);
+	} */
+
+	.capstone .container {
+		width: 65%;
+		transform: translate(22%, 0%);
+	}
+
+	.showcase {
+		height: 100vh !important;
+	}
+}
+
+/* Badges */
+
+.badge {
+	font-weight: 500;
+}
+
+.bs-badge {
+	background-color: var(--bs-success);
+}
+
+.html-badge {
+	background-color: var(--bs-cyan);
+	color: var(--bs-gray-dark)
+}
+
+.css-badge {
+	background-color: var(--bs-primary);
+}
+
+.js-badge {
+	background-color: var(--bs-warning);
+	color: var(--bs-gray-dark)
+}
+
+.java-badge {
+	background-color: var(--bs-cyan);
+	color: var(--bs-gray-dark);
+}
+
+.csharp-badge {
+	background-color: var(--bs-danger);
+}
+
+.cplus-badge {
+	background-color: var(--bs-purple);
+}
+
+.python-badge {
+	background-color: var(--bs-teal);
+	color: var(--bs-gray-dark);
+}
+
+.react-badge {
+	background-color: var(--bs-orange);
+	/* color: var(--bs-gray-dark) */
+}
+
+.reactn-badge {
+	background-color: var(--bs-purple);
+}
+
+.ml-badge {
+	background-color: lightsteelblue;
+	color: var(--bs-gray-dark);
+}
+
+.aws-badge {
+	background-color: #ec912d;
+	color: var(--bs-gray-dark);
+}
+
+.db-badge {
+	background-color: var(--bs-pink);
+	/* color: var(--bs-gray-dark); */
+}
+
+.cloud-badge {
+	background-color: rgb(80, 71, 138);
+}
+
+.jupyter-badge {
+	background-color: lightcoral;
+}
+
+.c-badge {
+	background-color: darkmagenta;
+}
+
+/* End Badges */
+
+:root {
+	/* BOOTSTRAP COLORS */
+	--bs-primary: #0d6efd;
+	--bs-secondary: #6c757d;
+	--bs-success: #198754;
+	--bs-info: #0dcaf0;
+	--bs-warning: #ffc107;
+	--bs-danger: #dc3545;
+	--bs-light: #f8f9fa;
+	--bs-dark: #212529;
+
+	--bs-blue: #0d6efd;
+	--bs-indigo: #6610f2;
+	--bs-purple: #6f42c1;
+	--bs-pink: #d63384;
+	--bs-red: #dc3545;
+	--bs-orange: #fd7e14;
+	--bs-yellow: #ffc107;
+	--bs-green: #198754;
+	--bs-teal: #20c997;
+	--bs-cyan: #0dcaf0;
+	--bs-white: #fff;
+	--bs-gray: #6c757d;
+	--bs-gray-dark: #343a40;
+}
